@@ -8,7 +8,7 @@ $('#home').on('click',function (e){
  $.ajax({
       type:"POST",
       url:"https://github.com/shreyavi/temp/blob/master/getLatLang.py",
-      dataType:'jsonp', 
+      dataType:'text/html', 
       success: function(data) {
        //var response = JSON.parse(data);
        //console.log(response[0]);
