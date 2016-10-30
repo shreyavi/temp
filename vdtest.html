@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -6,8 +7,8 @@ $(document).ready(function(){
 $('#home').on('click',function (e){
 
  $.ajax({
-      type:"POST",
-      url:"https://github.com/shreyavi/temp/blob/master/getLatLang.py",
+      type:"GET",
+      url:"https://www.pythonanywhere.com/user/shreyavj/files/home/shreyavj/getLatLang.py?edit",
       dataType:'text/html', 
       success: function(data) {
        //var response = JSON.parse(data);
