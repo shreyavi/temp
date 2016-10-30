@@ -17,12 +17,12 @@ class WebHandler(http.server.BaseHTTPRequestHandler):
 
         print(postvars)
 
-        # reply with JSON
-        self.send_response(200)
-        self.send_header("Content-type", "application/json")
-        self.send_header("Access-Control-Allow-Origin", "*");
+		# reply with JSON
+		self.send_response(200)
+		self.send_header("Content-type", "application/json")
+		self.send_header("Access-Control-Allow-Origin", "*");
 		self.send_header("Access-Control-Expose-Headers", "Access-Control-Allow-Origin");
 		self.send_header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-        self.end_headers()
-        json_response = json.dumps({'test': 42})
-        self.wfile.write(bytes(json_response, "utf-8"))
+		self.end_headers()
+		json_response = json.dumps({'test': 42})
+		self.wfile.write(bytes(json_response, "utf-8"))
