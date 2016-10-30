@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(document).ready(function(){
+$('#home').on('click',function (e){
+
+ $.ajax({
+      type:"POST",
+      url:"https://github.com/shreyavi/temp/blob/master/getLatLang.py",
+      dataType:'text/html', 
+      success: function(data) {
+       //var response = JSON.parse(data);
+       //console.log(response[0]);
+       console.log("success");
+      },
+      error: function(request, status, error) {
+       console.log("error");
+      }
+   });
+   e.preventDefault();
+});
+});
+
+</script>
+</head>
+<body>
+<input type="text" name="name" id="name">
+<button type="button" id="home" name = "button" >CLICK</button>
+</body>
+
+</html>
